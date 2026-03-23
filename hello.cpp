@@ -1,26 +1,19 @@
 #include <iostream>
 
-void calculateSum(int a, int b, int c);
+void showValues(int values[], int size);
 
 int main() {
 
-    int a;
-    int b;
-    int c;
-    
-
-    a = 5;
-    b = 10;
-    c = 15;
-
-    calculateSum(a,b,c);
-    
-
-    return 0;
+int myValues[] = {1, 2, 3, 4, 5};
+int size = sizeof(myValues) / sizeof(myValues[0]);
+showValues(myValues, size);
 
 }
 
-void calculateSum(int a, int b, int c) {
-    int sum = a + b + c;
-    std::cout << sum;
+void showValues(int values[], int size) {
+    std::cout << "Values: ";
+    for (int i = 0; i < size; ++i) {
+        std::cout << values[i] << " ";
+    }
+    std::cout << std::endl;
 }
