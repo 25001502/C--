@@ -1,13 +1,13 @@
 #include <iostream>
-
+#include <string>
 
 
 int main() {
 
-int a= 100;
-int *intprt = &a;
+std::string name = "World";
 
-std::cout << *intprt << std::endl;
+
+std::cout << "Hello, " << name << "!" << std::endl;
 
 }
 
