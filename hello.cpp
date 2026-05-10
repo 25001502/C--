@@ -1,13 +1,20 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
 
-int main() {
-
-std::string name = "World";
-
-
-std::cout << "Hello, " << name << "!" << std::endl;
-
+int add(int a, int b)
+{
+    return a + b;
 }
 
+int main()
+{
+
+    int (*bill)(int, int);
+    bill = add;
+
+    int results = bill(5, 10);
+
+    cout << "The result is: " << results ;
+}
