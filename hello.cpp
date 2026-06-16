@@ -1,20 +1,15 @@
+#include <fstream>
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-int add(int a, int b)
-{
-    return a + b;
-}
+int main() {
+       ifstream inFile("students.txt");
 
-int main()
-{
+       if (!inFile.is_open()) {
+              cout << "The file was not successfully opened" << endl;
+              return 1;
+       }
 
-    int (*bill)(int, int);
-    bill = add;
-
-    int results = bill(5, 10);
-
-    cout << "The result is: " << results ;
+       return 0;
 }
